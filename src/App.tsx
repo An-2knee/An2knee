@@ -114,7 +114,7 @@ const projects: Project[] = [
     name: 'Real-time Collaboration Platform',
     description: 'Multi-user document editing with CRDT-based conflict resolution and presence indicators.',
     tags: ['TypeScript', 'WebSocket', 'Y.js'],
-    color: '#ec4899'
+    color: '#4f46e5'
   },
   {
     id: 6,
@@ -131,7 +131,7 @@ const designWorks: DesignWork[] = [
     title: 'Meridian Brand Identity',
     type: 'Branding',
     year: '2024',
-    color: '#ff6b6b',
+    color: '#4f46e5',
     description: 'Complete visual identity system for a fintech startup, including logo, typography, and comprehensive brand guidelines.'
   },
   {
@@ -187,7 +187,7 @@ const designWorks: DesignWork[] = [
     title: 'Stratum Editorial Layout',
     type: 'Editorial',
     year: '2024',
-    color: '#ec4899',
+    color: '#4f46e5',
     description: 'Magazine layout design for a quarterly architecture publication, featuring custom grid systems and infographics.'
   }
 ];
