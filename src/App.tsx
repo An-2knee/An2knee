@@ -323,6 +323,7 @@ function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [selectedWork, setSelectedWork] = useState<DesignWork | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
   const [currentGundamIndex, setCurrentGundamIndex] = useState(0);
   const autoSlideTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -332,7 +333,11 @@ function App() {
       setTheme(savedTheme);
       document.documentElement.setAttribute('data-theme', savedTheme);
     }
-    setIsLoaded(true);
+    const minLoadTime = new Promise<void>((resolve) => setTimeout(resolve, 1200));
+    minLoadTime.then(() => {
+      setIsLoaded(true);
+      setTimeout(() => setShowLoader(false), 700);
+    });
   }, []);
 
   // Auto-slide timer for Gundam page
@@ -874,6 +879,19 @@ function App() {
   };
 
   return (
+    <>
+      {/* Loading Screen */}
+      {showLoader && (
+        <div className={`loading-screen ${isLoaded ? 'fade-out' : ''}`}>
+          <div className="loading-logo">
+            An2<span>knee</span>
+          </div>
+          <div className="loading-bar-track">
+            <div className="loading-bar-fill" />
+          </div>
+        </div>
+      )}
+
     <div
       className={`min-h-screen relative transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       style={{ backgroundColor: currentPage === 'design' ? 'var(--bg-secondary)' : 'var(--bg-primary)' }}
@@ -1114,6 +1132,7 @@ function App() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
