@@ -497,6 +497,8 @@ body {
   line-height: 1.05;
   margin: 0;
   letter-spacing: -0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .gundam-meta {
