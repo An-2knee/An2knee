@@ -479,8 +479,7 @@ function App() {
           className="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-6 entrance-fade tracking-tight leading-tight"
           style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
         >
-          Pixel
-          <span className="gradient-text block">Craftsman</span>
+          An2knee
         </h1>
 
         <p
