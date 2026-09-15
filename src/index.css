@@ -93,6 +93,178 @@ body {
   66% { transform: translate(-20px, 20px) scale(0.95); }
 }
 
+/* ===== ANIMATED BACKGROUND LAYERS ===== */
+
+/* Dot grid overlay */
+.bg-dot-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, var(--text-muted) 0.6px, transparent 0.6px);
+  background-size: 32px 32px;
+  opacity: 0.06;
+  animation: dotGridDrift 90s linear infinite;
+}
+
+@keyframes dotGridDrift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-32px, -32px); }
+}
+
+/* Floating orbs container */
+.bg-floating-orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Individual orb base */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+/* Orb 1 — large, soft indigo, top-left */
+.bg-orb--1 {
+  width: 420px;
+  height: 420px;
+  top: -8%;
+  left: -5%;
+  background: var(--accent);
+  animation-name: orbFloat1;
+  animation-duration: 28s;
+}
+
+/* Orb 2 — medium, cyan-ish, bottom-right */
+.bg-orb--2 {
+  width: 300px;
+  height: 300px;
+  bottom: -10%;
+  right: -5%;
+  background: #06b6d4;
+  animation-name: orbFloat2;
+  animation-duration: 32s;
+}
+
+/* Orb 3 — small accent, center drift */
+.bg-orb--3 {
+  width: 200px;
+  height: 200px;
+  top: 40%;
+  left: 55%;
+  background: var(--accent);
+  filter: blur(100px);
+  animation-name: orbFloat3;
+  animation-duration: 24s;
+}
+
+/* Orb 4 — tiny warm, top-right */
+.bg-orb--4 {
+  width: 160px;
+  height: 160px;
+  top: 10%;
+  right: 20%;
+  background: #f472b6;
+  filter: blur(90px);
+  animation-name: orbFloat4;
+  animation-duration: 36s;
+}
+
+/* Orb 5 — large faint, bottom-left */
+.bg-orb--5 {
+  width: 350px;
+  height: 350px;
+  bottom: 5%;
+  left: 15%;
+  background: #818cf8;
+  filter: blur(110px);
+  animation-name: orbFloat5;
+  animation-duration: 30s;
+}
+
+/* Orb 6 — subtle green, mid-right */
+.bg-orb--6 {
+  width: 180px;
+  height: 180px;
+  top: 60%;
+  right: 10%;
+  background: #34d399;
+  filter: blur(95px);
+  animation-name: orbFloat6;
+  animation-duration: 26s;
+}
+
+/* Orb floating keyframes — each follows a unique organic path */
+@keyframes orbFloat1 {
+  0%   { transform: translate(0, 0) scale(1);      opacity: 0.07; }
+  25%  { transform: translate(80px, 60px) scale(1.1);  opacity: 0.10; }
+  50%  { transform: translate(40px, 120px) scale(0.95); opacity: 0.06; }
+  75%  { transform: translate(-30px, 50px) scale(1.05); opacity: 0.09; }
+  100% { transform: translate(0, 0) scale(1);      opacity: 0.07; }
+}
+
+@keyframes orbFloat2 {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.06; }
+  30%  { transform: translate(-70px, -50px) scale(1.08); opacity: 0.09; }
+  60%  { transform: translate(-30px, -100px) scale(0.92); opacity: 0.05; }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.06; }
+}
+
+@keyframes orbFloat3 {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.04; }
+  35%  { transform: translate(-60px, -40px) scale(1.15); opacity: 0.08; }
+  65%  { transform: translate(50px, 30px) scale(0.9);  opacity: 0.03; }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.04; }
+}
+
+@keyframes orbFloat4 {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.04; }
+  20%  { transform: translate(-40px, 70px) scale(1.05); opacity: 0.07; }
+  50%  { transform: translate(30px, 100px) scale(0.95); opacity: 0.05; }
+  80%  { transform: translate(60px, 20px) scale(1.08);  opacity: 0.06; }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.04; }
+}
+
+@keyframes orbFloat5 {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.05; }
+  40%  { transform: translate(90px, -60px) scale(1.1); opacity: 0.08; }
+  70%  { transform: translate(40px, -30px) scale(0.93); opacity: 0.04; }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.05; }
+}
+
+@keyframes orbFloat6 {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.03; }
+  30%  { transform: translate(-50px, -80px) scale(1.12); opacity: 0.06; }
+  60%  { transform: translate(40px, -40px) scale(0.9);  opacity: 0.04; }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.03; }
+}
+
+/* Light theme — slightly more visible orbs to stand out against the lighter bg */
+[data-theme="light"] .bg-orb { opacity: 0; }
+[data-theme="light"] .bg-dot-grid { opacity: 0.04; }
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .bg-orb,
+  .bg-dot-grid,
+  .bg-mesh {
+    animation: none !important;
+    opacity: 0.03 !important;
+  }
+}
+
 /* Entrance Animations */
 @keyframes fadeInUp {
   from {

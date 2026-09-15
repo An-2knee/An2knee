@@ -897,6 +897,15 @@ function App() {
       style={{ backgroundColor: currentPage === 'design' ? 'var(--bg-secondary)' : 'var(--bg-primary)' }}
     >
       <div className="bg-mesh" />
+      <div className="bg-dot-grid" />
+      <div className="bg-floating-orbs">
+        <div className="bg-orb bg-orb--1" />
+        <div className="bg-orb bg-orb--2" />
+        <div className="bg-orb bg-orb--3" />
+        <div className="bg-orb bg-orb--4" />
+        <div className="bg-orb bg-orb--5" />
+        <div className="bg-orb bg-orb--6" />
+      </div>
 
       {/* Navigation */}
       <nav
