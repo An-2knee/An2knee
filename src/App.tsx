@@ -465,7 +465,7 @@ function App() {
             className="text-xs"
             style={{ color: 'var(--text-muted)' }}
           >
-            An2knee © 2026 All rights reserved.
+            An2knee © 2024 All rights reserved.
           </p>
         </div>
       </div>
