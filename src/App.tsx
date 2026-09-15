@@ -203,7 +203,7 @@ const gundamKits: GundamKit[] = [
     description: 'Equipped with the revolutionary NT-D System, the Unicorn transforms between Unicorn and Destroy modes. Its psychoframe glows crimson when the pilot\'s psychic potential awakens.',
     accentColor: '#ff4d6d',
     status: 'Completed',
-    color: '#f5f5f5'
+    color: '#fef2f2'
   },
   {
     id: 2,
@@ -215,7 +215,7 @@ const gundamKits: GundamKit[] = [
     description: 'Char Aznable\'s ultimate mobile suit — a towering Newtype-use machine armed with funnels, mega particle cannons, and a presence that commands the battlefield.',
     accentColor: '#e63946',
     status: 'Completed',
-    color: '#c0c0c0'
+    color: '#fef2f2'
   },
   {
     id: 3,
@@ -227,7 +227,7 @@ const gundamKits: GundamKit[] = [
     description: 'The original White Devil. The RX-78-2 set the standard for all mobile suits that followed. Amuro Ray\'s legendary machine that turned the tide of the One Year War.',
     accentColor: '#3a86ff',
     status: 'Completed',
-    color: '#ffffff'
+    color: '#eff6ff'
   },
   {
     id: 4,
@@ -239,7 +239,7 @@ const gundamKits: GundamKit[] = [
     description: 'A sinister yet elegant mobile suit developed by Jeturk Heavy Machinery, featuring the versatile Guardian multi-purpose offensive and defensive system.',
     accentColor: '#e63946',
     status: 'Completed',
-    color: '#2b2b2b'
+    color: '#1f2937'
   },
   {
     id: 5,
@@ -251,7 +251,7 @@ const gundamKits: GundamKit[] = [
     description: 'Piloted by Graham Aker, the Exia Repair IV features a bespoke asymmetrical design and an arsenal of new GN blades optimized for its left-handed pilot.',
     accentColor: '#00d0ff',
     status: 'Completed',
-    color: '#e8e8e8'
+    color: '#ecf0ff'
   },
   {
     id: 6,
@@ -263,7 +263,7 @@ const gundamKits: GundamKit[] = [
     description: 'A sharp and highly detailed third-party model kit boasting incredible articulation, aggressive knight-like styling, and a massive arsenal of weapons.',
     accentColor: '#4361ee',
     status: 'Completed',
-    color: '#d0d0d0'
+    color: '#eef2ff'
   },
   {
     id: 7,
@@ -275,7 +275,7 @@ const gundamKits: GundamKit[] = [
     description: 'Another stunning release from SNAA, featuring striking aesthetics with heavy armor and intricate mechanical details that rival mainstream master grades.',
     accentColor: '#e01e37',
     status: 'Completed',
-    color: '#eeeeee'
+    color: '#fef3f2'
   },
   {
     id: 8,
@@ -287,7 +287,7 @@ const gundamKits: GundamKit[] = [
     description: 'Heero Yuy\'s angelic war machine in a unique super-deformed proportion with master-grade details. Features spectacular wing articulation and the Twin Buster Rifle.',
     accentColor: '#48cae4',
     status: 'Completed',
-    color: '#e2e2e2'
+    color: '#ecfdf5'
   },
   {
     id: 9,
@@ -299,7 +299,7 @@ const gundamKits: GundamKit[] = [
     description: 'An awe-inspiring, dragon-inspired mecha with imposing spiky armor and a metallic finish. Comes with an incredible draconic companion and weapon system.',
     accentColor: '#d4af37',
     status: 'Completed',
-    color: '#1a1a1a'
+    color: '#18181b'
   },
   {
     id: 10,
@@ -311,7 +311,7 @@ const gundamKits: GundamKit[] = [
     description: 'A deity-like mecha inspired by Chinese mythology, featuring flaming wheel accessories, multiple arms, and a spear, presented in stunning metallic red and gold.',
     accentColor: '#ff003c',
     status: 'Completed',
-    color: '#f02d3a'
+    color: '#fef2f2'
   }
 ];
 
